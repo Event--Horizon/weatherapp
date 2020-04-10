@@ -1,6 +1,6 @@
 const request = require("request");
 const dotenv = require("dotenv");
-dotenv.load();
+dotenv.config();
 
 const token = process.env.GEOCODE;
 
