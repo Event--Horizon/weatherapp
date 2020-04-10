@@ -14,7 +14,7 @@ const forecast = (lat, long, callback) => {
         } else if (body.error) {
           callback(body.error, undefined);
         } else {
-          callback(undefined, body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' degrees out. There is a ' + body.currently.precipProbability + '% chance of rain' );
+          callback(undefined, body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' degrees out. \n There is a ' + body.currently.precipProbability + '% chance of rain. \n The high for today is ' + body.daily.data[0].temperatureHigh + " and the low is " + body.daily.data[0].temperatureLow );
         }
   });
 }
